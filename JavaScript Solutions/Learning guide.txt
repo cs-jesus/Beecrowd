@@ -1,0 +1,32 @@
+Problem 1000: 
+
+"var input = require('fs').readFileSync('/dev/stdin', 'utf8');"
+
+Linha que se refere à leitura de um arquivo disponibilizado pela plataforma.
+Dentro desse arquivo estão os argumentos que serão lidos e processados pelo programa.
+
+"var lines = input.split('\n');"
+Ordena os valores recebidos dentro de um Array.
+
+
+
+Problem 1001:
+
+let num1 = parseInt(lines.shift()),
+    num2 = parseInt(lines.shift()),
+
+Armazenando as variáveis por meio do comando let, porém para a solução aceita pela plataforma alguns pontos devem ser considerados:
+- Os valores recebidos pelo array devem ser atribuído dentro de suas respectivas variáveis, dessa forma o uso do método lines.shift() torna-se crucial para recortar o valor do array e realizar a atribuição.
+- Como o dado armazenado dentro do array é do tipo string, é preciso fazer uma conversão com o uso do método parse seguido do tipo pretendido (Int, Float, Data)
+- Dessa forma a variável receberá o dado com a conversão correta e esperada pela plataforma.
+
+Problem 1002:
+
+A = (n * R**2).toFixed(4);
+
+O problema apresenta a necessidade de formatar a saída de um valor com ponto flutuante.
+Um método para sanar tal necessidade é o  .toFixed(), sendo necessário indicar a quantidaed de casas decimais requerida.
+
+Outro ponto apresentado é o uso da potenciação que pode ser feita de algumas formas:
+Método Math.pow(base, expoent) -> Método estático que retorna o resultado.
+Operador ** -> Operador matemático que representa a potenciação.
